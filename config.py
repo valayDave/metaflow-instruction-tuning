@@ -52,7 +52,7 @@ class TokenizationParams:
 @dataclass
 class DataParams:
     num_samples: Union[int, None] = None
-    huggingface_dataset_path: str = "yahma/alpaca-cleaned"
+    huggingface_dataset_path: Optional[str] = "yahma/alpaca-cleaned"
     local_dataset_path: Optional[str] = None
     prompt_template: PromptTemplate = field(default_factory=PromptTemplate)
     tokenization: TokenizationParams = field(default_factory=TokenizationParams)
